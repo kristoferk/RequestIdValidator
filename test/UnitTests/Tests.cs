@@ -17,6 +17,15 @@ namespace UnitTests
         }
 
         [Fact]
+        public void DeepDeepNested_Copy2()
+        {
+            var obj = new DeepDeepNestedObject { Child = new DeepNestedObject { Child = new NestedObject { Child = new SimpleIntObject { Id = 0 } } } };
+
+            IdentityValidator.VerifyIds(9, obj.Child?.Child?.Child, o => o.Id).Status.ShouldBeEquivalentTo(ValidationResult.Valid);
+            obj.Child?.Child?.Child?.Id.ShouldBeEquivalentTo(9);
+        }
+
+        [Fact]
         public void DeepNested_Copy()
         {
             var obj = new DeepNestedObject { Child = new NestedObject { Child = new SimpleIntObject { Id = 0 } } };

@@ -15,22 +15,22 @@ namespace RequestIdValidator
         {
             if (Status == ValidationResult.ErrorMissingBody)
             {
-                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Missing request body");
+                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Missing request body.");
             }
 
             if (Status == ValidationResult.ErrorMissingOrInvalidLamda)
             {
-                throw new IdentityException(HttpStatusCode.InternalServerError, Status, "Missing or invalid lamda property member expression");
+                throw new IdentityException(HttpStatusCode.InternalServerError, Status, "Missing or invalid lamda property member expression.");
             }
 
-            if (Status == ValidationResult.ErrorUnequalIds)
+            if (Status == ValidationResult.ErrorNotEqualIds)
             {
-                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request");
+                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request.");
             }
 
             if (Status != ValidationResult.Valid)
             {
-                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request");
+                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request.");
             }
         }
     }

@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{442A1DE8-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F9D9514-A119-4069-AFDC-73C3CDE0124E}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		global.json = global.json
-		LICENSE = LICENSE
 		README.md = README.md
 		RequestIdValidator.sln.DotSettings = RequestIdValidator.sln.DotSettings
 	EndProjectSection

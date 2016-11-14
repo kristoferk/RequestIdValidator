@@ -3,8 +3,8 @@
     public enum ValidationResult
     {
         Valid = 1,
-        ErrorUnequalIds = 2,
+        ErrorNotEqualIds = 2,
         ErrorMissingBody = 3,
-        ErrorMissingOrInvalidLamda = 3,
+        ErrorMissingOrInvalidLamda = 3
     }
 }

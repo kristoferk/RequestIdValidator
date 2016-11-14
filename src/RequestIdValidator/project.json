@@ -1,6 +1,16 @@
 ﻿{
   "version": "1.0.0-*",
-
+  "title": "RequestIdValidator",
+  "description": "Checks if id in url and body are the same for http put requests.",
+  "authors": [ "kristoferk" ],
+  "packOptions": {
+    "tags": [ ".NET", "C#", "HttpRequest", "Validator", "Validation", "Rest" ],
+    "projectUrl": "https://github.com/kristoferk/RequestIdValidator/",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/kristoferk/RequestIdValidator"
+    }
+  },
   "dependencies": {
   },
 

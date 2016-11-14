@@ -12,6 +12,16 @@ namespace UnitTests
         public SimpleIntObject Child { get; set; } = new SimpleIntObject();
     }
 
+    public class DeepNestedObject
+    {
+        public NestedObject Child { get; set; } = new NestedObject();
+    }
+
+    public class DeepDeepNestedObject
+    {
+        public DeepNestedObject Child { get; set; } = new DeepNestedObject();
+    }
+
     public class SimpleGuidObject
     {
         public Guid Id { get; set; } = Guid.NewGuid();

@@ -87,6 +87,11 @@ namespace RequestIdValidator
             for (int i = 0; i < bits.Length - 1; i++)
             {
                 PropertyInfo propertyToGet = target.GetType().GetTypeInfo().GetDeclaredProperty(bits[i]);
+                if (propertyToGet == null)
+                {
+                    continue;
+                }
+
                 target = propertyToGet.GetValue(target, null);
             }
             PropertyInfo propertyToSet = target.GetType().GetTypeInfo().GetDeclaredProperty(bits[bits.Length - 1]);

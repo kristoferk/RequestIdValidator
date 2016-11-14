@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "RequestIdValidator",
   "description": "Checks if id in url and body are the same for http put requests.",
   "authors": [ "kristoferk" ],

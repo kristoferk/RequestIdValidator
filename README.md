@@ -17,6 +17,22 @@ Use IdentityValidator to compare id in url and body
 [HttpPut("{id}")]
 public async Task<Customer> UpdateCustomer(int id, [FromBody] Customer customer)
 {
+    IdentityValidator.VerifyIds(id, customer, c => c.Id).ThrowExceptionOnError();
+
+	//...
+            
+    return customer;
+}
+
+````
+
+## Or using non static version
+
+````csharp
+
+[HttpPut("{id}")]
+public async Task<Customer> UpdateCustomer(int id, [FromBody] Customer customer)
+{
     IIdentityValidator validator = new IdentityValidator();
     validator.VerifyIds(id, customer, c => c.Id).ThrowExceptionOnError();
 

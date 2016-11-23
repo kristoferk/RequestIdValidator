@@ -8,7 +8,7 @@
     "projectUrl": "https://github.com/kristoferk/RequestIdValidator/",
     "repository": {
       "type": "git",
-      "url": "git://github.com/kristoferk/RequestIdValidator"
+      "url": "git://github.com/kristoferk/RequestIdValidator.git"
     }
   },
   "dependencies": {

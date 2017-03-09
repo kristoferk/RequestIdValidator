@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RequestIdValidator", "src\RequestIdValidator\RequestIdValidator.xproj", "{C1ABF5D7-E1B9-446D-BC7C-49C90A02AF65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestIdValidator", "src\RequestIdValidator\RequestIdValidator.csproj", "{C1ABF5D7-E1B9-446D-BC7C-49C90A02AF65}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnitTests", "test\UnitTests\UnitTests.xproj", "{5086A49F-3CF5-43DD-9C85-552B11E430EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "test\UnitTests\UnitTests.csproj", "{5086A49F-3CF5-43DD-9C85-552B11E430EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{134E7C9D-44ED-4402-A051-6D786B7CA198}"
 EndProject
@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		global.json = global.json
 		README.md = README.md
 		RequestIdValidator.sln.DotSettings = RequestIdValidator.sln.DotSettings
 	EndProjectSection

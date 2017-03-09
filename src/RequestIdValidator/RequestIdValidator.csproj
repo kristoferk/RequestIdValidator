@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Checks if id in url and body are the same for http put requests.</Description>
+    <AssemblyTitle>RequestIdValidator</AssemblyTitle>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <Authors>kristoferk</Authors>
+    <TargetFrameworks>net451;netstandard1.3</TargetFrameworks>
+    <AssemblyName>RequestIdValidator</AssemblyName>
+    <PackageId>RequestIdValidator</PackageId>
+    <PackageTags>.NET;C#;HttpRequest;Validator;Validation;Rest</PackageTags>
+    <PackageProjectUrl>https://github.com/kristoferk/RequestIdValidator/</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/kristoferk/RequestIdValidator.git</RepositoryUrl>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

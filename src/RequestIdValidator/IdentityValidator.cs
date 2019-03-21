@@ -17,7 +17,7 @@ namespace RequestIdValidator
             {
                 return new ValidationResponse(ValidationResult.ErrorMissingBody);
             }
-
+         
             var memberSelectorExpression = GetMemberExpression(identityProperty?.Body);
             if (identityProperty == null || memberSelectorExpression == null)
             {
@@ -36,9 +36,15 @@ namespace RequestIdValidator
             if (navigationPropertyName.Split('.').Length - 1 <= 0)
             {
                 bodyId = property.GetValue(body);
-                object defaultValue = GetDefaultValue(bodyId.GetType());
 
-                if (bodyId.Equals(defaultValue))
+                if (queryStringId == null && bodyId == null)
+                {
+                    return new ValidationResponse(ValidationResult.ErrorMissingIds);
+                }
+
+                object defaultValue = GetDefaultValue(bodyId?.GetType() ?? property.PropertyType);
+
+                if (bodyId == null && defaultValue == null || bodyId.Equals(defaultValue))
                 {
                     property.SetValue(body, queryStringId, null);
                 }

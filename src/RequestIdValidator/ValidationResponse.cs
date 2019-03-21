@@ -25,9 +25,14 @@ namespace RequestIdValidator
 
             if (Status == ValidationResult.ErrorNotEqualIds)
             {
-                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request.");
+                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request. Id in url not equal to body");
             }
 
+            if (Status == ValidationResult.ErrorMissingIds)
+            {
+                throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request, missing Id.");
+            }
+                       
             if (Status != ValidationResult.Valid)
             {
                 throw new IdentityException(HttpStatusCode.BadRequest, Status, "Invalid request.");

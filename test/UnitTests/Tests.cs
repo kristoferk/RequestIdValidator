@@ -111,6 +111,15 @@ namespace UnitTests
         }
 
         [Fact]
+        public void Int2_Equals()
+        {
+            var obj = new SimpleIntObject();
+            obj.Id = 0;
+            IdentityValidator.VerifyIds(1, obj, o => o.Id).Status.ShouldBeEquivalentTo(ValidationResult.Valid);
+            obj.Id.ShouldBeEquivalentTo(1);
+        }
+
+        [Fact]
         public void Int_NotEqual()
         {
             var obj = new SimpleIntObject { Id = 1 };
@@ -149,6 +158,24 @@ namespace UnitTests
         {
             var obj = new SimpleStringObject();
             IdentityValidator.VerifyIds(obj.Id, obj, o => o.Id).Status.ShouldBeEquivalentTo(ValidationResult.Valid);
+        }
+
+        [Fact]
+        public void String2_Equals()
+        {
+            var obj = new SimpleStringObject();
+            obj.Id = null;
+            IdentityValidator.VerifyIds("Test", obj, o => o.Id).Status.ShouldBeEquivalentTo(ValidationResult.Valid);
+
+            obj.Id.ShouldBeEquivalentTo("Test");
+        }
+
+        [Fact]
+        public void AllNull_Equals()
+        {
+            var obj = new SimpleStringObject();
+            obj.Id = null;
+            IdentityValidator.VerifyIds(null, obj, o => o.Id).Status.ShouldBeEquivalentTo(ValidationResult.ErrorMissingIds);
         }
     }
 }
